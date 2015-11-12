@@ -1,0 +1,13 @@
+{% extends "WSWoodstackBundle::layout.html.twig" %}
+
+{% block title %}
+	WoodStack  
+{% endblock %}
+
+
+{% block fos_user_content %}
+
+	{{ include("FOSUserBundle:Registration:register_content.html.twig") }}
+
+{% endblock fos_user_content %}
+

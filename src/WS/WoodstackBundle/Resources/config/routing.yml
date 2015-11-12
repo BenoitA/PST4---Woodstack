@@ -1,0 +1,17 @@
+ws_woodstack_home:
+    path:  /
+    defaults: { _controller: WSWoodstackBundle:Wood:index, page: 1 }
+    requirements:
+       page: \d*
+
+ws_woodstack_login:
+    path:    /login
+    defaults: { _controller:WSWoodstackBundle:Security:login }
+    requirements:
+      id: \d+
+
+ws_woodstack_register:
+    path:   /register
+    defaults: { _controller:WSWoodstackBundle:Registration:register }
+    requirements:
+      id: \d+

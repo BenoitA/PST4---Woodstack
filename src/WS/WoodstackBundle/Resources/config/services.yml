@@ -1,0 +1,20 @@
+parameters:
+    ws_woodstack.component.authentication.handler.login_success_handler.class: WS\WoodstackBundle\Component\Authentication\Handler\LoginSuccessHandler
+    ws_woodstack.component.authentication.handler.logout_success_handler.class: WS\WoodstackBundle\Component\Authentication\Handler\LogoutSuccessHandler
+
+
+
+services:
+#    ws_woodstack.example:
+#        class: WS\WoodstackBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+     ws_woodstack.component.authentication.handler.login_success_handler:
+       class: %ws_woodstack.component.authentication.handler.login_success_handler.class%
+       arguments:  [@service_container, @router, @security.context]
+       tags:
+          - { name: 'monolog.logger', channel: 'security' }
+     ws_woodstack.component.authentication.handler.logout_success_handler:
+       class:  %ws_woodstack.component.authentication.handler.logout_success_handler.class%
+       arguments:  [@service_container, @router]
+       tags:
+           - { name: 'monolog.logger', channel:'security' }

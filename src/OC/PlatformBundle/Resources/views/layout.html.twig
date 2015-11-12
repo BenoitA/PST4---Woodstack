@@ -1,0 +1,14 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{# On definit un sous-titre a toutes les pages du bundle par ex #}
+	<h1>Annonces</h1>
+	
+	<hr>
+	{% block ocplatform_body %}
+	{% endblock %}
+{% endblock %}
