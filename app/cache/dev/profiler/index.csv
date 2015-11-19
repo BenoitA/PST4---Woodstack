@@ -1,7 +1,1 @@
-b155d7,::1,GET,http://localhost/Symfony/web/app_dev.php/woodstack/,1447259467,,200
-810b04,::1,GET,http://localhost/Symfony/web/app_dev.php/woodstack/register,1447259477,,200
-c0a77d,::1,GET,http://localhost/Symfony/web/app_dev.php/register/,1447259503,3d89fa,200
-3d89fa,::1,POST,http://localhost/Symfony/web/app_dev.php/register/,1447259503,,500
-205f0c,::1,GET,http://localhost/Symfony/web/app_dev.php/register/,1447259563,2f26c7,200
-2f26c7,::1,POST,http://localhost/Symfony/web/app_dev.php/register/,1447259563,,500
-068865,::1,GET,http://localhost/Symfony/web/app_dev.php/register/,1447329317,,200
+c5579f,::1,GET,http://localhost/Symfony/web/app_dev.php/woodstack/,1447941521,,200

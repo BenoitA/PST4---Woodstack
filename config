@@ -1,7 +1,7 @@
 [core]
 	repositoryformatversion = 0
-	filemode = true
+	filemode = false
 	bare = true
-	sharedrepository = 1
-[receive]
-	denyNonFastforwards = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly

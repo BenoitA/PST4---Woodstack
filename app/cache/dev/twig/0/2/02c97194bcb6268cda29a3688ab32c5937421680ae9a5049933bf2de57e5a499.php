@@ -21,26 +21,26 @@ class __TwigTemplate_0c2ec30fbb69932263e9ff1bb666e9692dab17b22ea5b3e239c99e0d8f0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4d14ce0ed8042230fd3b26f36c36df41b967fc1505c2423b822e81e46c7f76a9 = $this->env->getExtension("native_profiler");
-        $__internal_4d14ce0ed8042230fd3b26f36c36df41b967fc1505c2423b822e81e46c7f76a9->enter($__internal_4d14ce0ed8042230fd3b26f36c36df41b967fc1505c2423b822e81e46c7f76a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
+        $__internal_0dfa7192f98025a9aecc1bdc7f2c0c0fcbd8d222f04a4243bfb58c31ba6032be = $this->env->getExtension("native_profiler");
+        $__internal_0dfa7192f98025a9aecc1bdc7f2c0c0fcbd8d222f04a4243bfb58c31ba6032be->enter($__internal_0dfa7192f98025a9aecc1bdc7f2c0c0fcbd8d222f04a4243bfb58c31ba6032be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4d14ce0ed8042230fd3b26f36c36df41b967fc1505c2423b822e81e46c7f76a9->leave($__internal_4d14ce0ed8042230fd3b26f36c36df41b967fc1505c2423b822e81e46c7f76a9_prof);
+        $__internal_0dfa7192f98025a9aecc1bdc7f2c0c0fcbd8d222f04a4243bfb58c31ba6032be->leave($__internal_0dfa7192f98025a9aecc1bdc7f2c0c0fcbd8d222f04a4243bfb58c31ba6032be_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_65d1d4beb9063d6a276ecd2501046797d8a71bfe0f83432096935e76d770b1c6 = $this->env->getExtension("native_profiler");
-        $__internal_65d1d4beb9063d6a276ecd2501046797d8a71bfe0f83432096935e76d770b1c6->enter($__internal_65d1d4beb9063d6a276ecd2501046797d8a71bfe0f83432096935e76d770b1c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0d377061fcc86f79a91759fd6328d9ceb8cfcd865cec0419ffa83aa738ac0e09 = $this->env->getExtension("native_profiler");
+        $__internal_0d377061fcc86f79a91759fd6328d9ceb8cfcd865cec0419ffa83aa738ac0e09->enter($__internal_0d377061fcc86f79a91759fd6328d9ceb8cfcd865cec0419ffa83aa738ac0e09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "\tWoodStack 
 ";
         
-        $__internal_65d1d4beb9063d6a276ecd2501046797d8a71bfe0f83432096935e76d770b1c6->leave($__internal_65d1d4beb9063d6a276ecd2501046797d8a71bfe0f83432096935e76d770b1c6_prof);
+        $__internal_0d377061fcc86f79a91759fd6328d9ceb8cfcd865cec0419ffa83aa738ac0e09->leave($__internal_0d377061fcc86f79a91759fd6328d9ceb8cfcd865cec0419ffa83aa738ac0e09_prof);
 
     }
 
