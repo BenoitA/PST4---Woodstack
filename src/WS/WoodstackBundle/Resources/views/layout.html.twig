@@ -70,11 +70,11 @@
 		</nav>
 		{% endif %}
 	
-	
-  <div class="container">
+
+  <div class="container"> 
   
-	<div class="col-xs-12 col-sm-9">
-		<div id="header" class="jumbotron">
+	<div class="col-xs-12 col-sm-9" style="text-align:center" >
+		<div id="header" class="jumbotron" style="background:lightgreen">
 			<h1 align="center">WoodStack</h1>
 			<p>
 				Ma plateforme de gestion <br />
@@ -82,20 +82,23 @@
 			</p>
       
 		</div>
-	</div>
-	<div class="row">
+	</div>	
+   </div>
+   
+   <div class="container">
+   <div class="row" style="left:50em">
 		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 			<div id="menu" class="col-md-2">
 				<h3>Menu</h3>
-				<ul class="nav nav-pills nav-stacked" style="color: green;">
+				<ul class="nav nav-pills nav-stacked" >
 					<li><a href="{{ path('fos_user_profile_edit') }}">Edition profil</a></li>
 					<li><a href="#">Clients</a></li>
 					<li><a href="#">????</a></li>
 				</ul>
 			</div>
 		{% endif %}
-		
-			<div id="content" class="col-md-9">
+
+			<div id="content" class="col-md-9" >
 				
 				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 					Bienvenue {{ app.user.username }}<br />
@@ -115,15 +118,11 @@
 			</div>
 			
 			
-		</div>
-	
-		<hr>
-	
-	
-		<footer align="center">
-			<p text-align="center" >Auffret - Glaisner - Nurit</p>
-		</footer>
 	</div>
+	<hr>
+		<footer style="text-align:center">
+			<p>Auffret - Glaisner - Nurit</p>
+		</footer>
   {% block javascripts %}
 	{# Ajouter ces lignes javascript pour utiliser des fonctionnalités
 	de bootstrap twitter #}
