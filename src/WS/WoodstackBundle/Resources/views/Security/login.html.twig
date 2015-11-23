@@ -17,10 +17,10 @@
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     
 		<label class="sr-only" for="username" >{{ 'security.login.username'|trans({}, 'FOSUserBundle') }} </label>
-		<input type="text" class="form-control" id="username" name="_username" value="Login" required="required" />
+		<input type="text" class="form-control" id="username" name="_username" value="Login" required="required" onclick="this.value='';"  />
 		<br/>
 		<label class="sr-only" for="password" >{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
-		<input type="password" class="form-control" id="password" name="_password" value="Mot de passe" required="required" />	
+		<input type="password" class="form-control" id="password" name="_password" value="Mot de passe" required="required" onclick="this.value='';"  />	
 				
 		<div class="checkbox">
 			<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
