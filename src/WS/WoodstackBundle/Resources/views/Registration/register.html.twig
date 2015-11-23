@@ -6,54 +6,27 @@
 
 
 {% block fos_user_content %}
-
-	{# {{ include("FOSUserBundle:Registration:register_content.html.twig") }} 
-	
-	
-	
-		<label class="sr-only" for="username" >{{ form_row(form.username) }} </label>
-    		<input type="text" class="form-control" id="username" name="_username" value="Nom d'utilisateur" required="required">
-    		</br>
-    		<label class="sr-only" for="email" >{{ form_row(form.email) }} </label>
-    		<input type="email" class="form-control" id="email" name="_email" value="Email" required="required">
-    		</br>
-    		
-    		<label class="sr-only" for="plainPassword" >{{ form_row(form.plainPassword) }}</label>
-    		<input type="password" class="form-control" id="plainPassword" name="_plainPassword" value="Mot de Passe" required="required">
-    		</br>
-    		
-    		
-    		<label class="sr-only" for="form" >{{ form_rest(form) }}</label>
-    		<input type="password" class="form-control" id="form" name="_form" value="Mot de Passe" required="required">
-    		</br>
-	
-	
-	
-	
-	
-	
-	#}
 <center>
 	<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" style="width:200px">
     	
     		
     		<td>{{ form_errors(form.username) }}</td>
-                <td>Nom d'utilisateur</td>
+                <td>Nom d'utilisateur :</td>
                 <td>{{ form_widget(form.username) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.email) }}</td>
-                <td>Email</td>
+                <td>Email :</td>
                 <td>{{ form_widget(form.email) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.plainPassword.first) }}</td>
-                <td>Mot de passe</td>
+                <td>Mot de passe :</td>
                 <td>{{ form_widget(form.plainPassword.first) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.plainPassword.second) }}</td>
-                <td>Confirmez le mot de passe</td>
+                <td>Confirmez le mot de passe :</td>
                 <td>{{ form_widget(form.plainPassword.second) }}</td>
  
  
@@ -61,7 +34,7 @@
                 
     		<div>
     			<br/>
-       			 <input class="btn btn-primary btn-block" type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+       			 <input class="btn btn-success btn-block" type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
     		</div>
 	</form>
 </center>
