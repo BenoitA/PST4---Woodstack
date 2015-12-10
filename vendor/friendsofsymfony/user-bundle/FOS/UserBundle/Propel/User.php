@@ -14,7 +14,6 @@ namespace FOS\UserBundle\Propel;
 use FOS\UserBundle\Model\GroupableInterface;
 use FOS\UserBundle\Model\UserInterface;
 use FOS\UserBundle\Propel\om\BaseUser;
-use FOS\UserBundle\Propel;
 
 class User extends BaseUser implements UserInterface, GroupableInterface
 {
