@@ -23,6 +23,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Internal\CommitOrderCalculator;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\ORM\Mapping\ClassMetadataInfo;
 
 /**
  * Class responsible for purging databases of data before reloading data fixtures.
@@ -128,14 +129,16 @@ class ORMPurger implements PurgerInterface
                 continue;
             }
 
-            $orderedTables[] = $class->getQuotedTableName($platform);
+            $orderedTables[] = $this->getTableName($class, $platform);
         }
 
+        $connection = $this->em->getConnection();
         foreach($orderedTables as $tbl) {
             if ($this->purgeMode === self::PURGE_MODE_DELETE) {
-                $this->em->getConnection()->executeUpdate("DELETE FROM " . $tbl);
+                $tbl = $connection->quoteIdentifier($tbl);
+                $connection->executeUpdate('DELETE FROM ' . $tbl );
             } else {
-                $this->em->getConnection()->executeUpdate($platform->getTruncateTableSQL($tbl, true));
+                $connection->executeUpdate($platform->getTruncateTableSQL($tbl, true));
             }
         }
     }
@@ -198,15 +201,42 @@ class ORMPurger implements PurgerInterface
         foreach ($classes as $class) {
             foreach ($class->associationMappings as $assoc) {
                 if ($assoc['isOwningSide'] && $assoc['type'] == ClassMetadata::MANY_TO_MANY) {
-                    if (isset($assoc['joinTable']['schema'])) {
-                        $associationTables[] = $assoc['joinTable']['schema'] . '.' . $class->getQuotedJoinTableName($assoc, $platform);
-                    } else {
-                        $associationTables[] = $class->getQuotedJoinTableName($assoc, $platform);
-                    }
+                    $associationTables[] = $this->getJoinTableName($assoc, $class, $platform);
                 }
             }
         }
 
         return $associationTables;
+    }
+
+    /**
+     *
+     * @param \Doctrine\ORM\Mapping\ClassMetadata $class
+     * @param \Doctrine\DBAL\Platforms\AbstractPlatform $platform
+     * @return string
+     */
+    private function getTableName($class, $platform)
+    {
+        if (isset($class->table['schema']) && !method_exists($class, 'getSchemaName')) {
+            return $class->table['schema'].'.'.$this->em->getConfiguration()->getQuoteStrategy()->getTableName($class, $platform);
+        }
+
+        return $this->em->getConfiguration()->getQuoteStrategy()->getTableName($class, $platform);
+    }
+
+    /**
+     *
+     * @param array            $association
+     * @param \Doctrine\ORM\Mapping\ClassMetadata    $class
+     * @param \Doctrine\DBAL\Platforms\AbstractPlatform $platform
+     * @return string
+     */
+    private function getJoinTableName($assoc, $class, $platform)
+    {
+        if (isset($assoc['joinTable']['schema']) && !method_exists($class, 'getSchemaName')) {
+            return $assoc['joinTable']['schema'].'.'.$this->em->getConfiguration()->getQuoteStrategy()->getJoinTableName($assoc, $class, $platform);
+        }
+
+        return $this->em->getConfiguration()->getQuoteStrategy()->getJoinTableName($assoc, $class, $platform);
     }
 }
