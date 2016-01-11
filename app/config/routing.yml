@@ -1,3 +1,7 @@
+homepage:
+    pattern:   /
+    defaults:  { _controller: AcmeHomeBundle:home:show }
+    
 ws_woodstack:
     resource: "@WSWoodstackBundle/Resources/config/routing.yml"
     prefix:   /woodstack
