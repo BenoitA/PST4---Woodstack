@@ -1,3 +1,8 @@
 c2134e,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1452541471,,200
 7145ed,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/css/bootstrap.min.css,1452541472,62507e,200
 62507e,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/css/bootstrap.min.css,1452541472,,404
+b3af78,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/,1452541686,e2381a,200
+e2381a,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/,1452541686,,500
+f1a3f4,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1452542740,,200
+25319f,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/css/bootstrap.min.css,1452542741,c1e1fb,200
+c1e1fb,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/css/bootstrap.min.css,1452542741,,404

@@ -133,7 +133,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'homepage');
             }
 
-            return array (  '_controller' => 'AcmeHomeBundle:home:show',  '_route' => 'homepage',);
+            return array('_route' => 'homepage');
         }
 
         if (0 === strpos($pathinfo, '/woodstack')) {
