@@ -13,7 +13,6 @@ use Psr\Log\LoggerInterface;
 class appProdUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
 {
     private static $declaredRoutes = array(
-        'default' => array (  0 =>   array (    0 => '_controller',  ),  1 =>   array (  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => '_controller',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'ws_woodstack_home' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'WS\\WoodstackBundle\\Controller\\WoodController::indexAction',    'page' => 1,  ),  2 =>   array (    'page' => '\\d*',  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/woodstack/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'ws_woodstack_login' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'WS\\WoodstackBundle\\Controller\\SecurityController::loginAction',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/woodstack/login',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'ws_woodstack_register' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'WS\\WoodstackBundle\\Controller\\RegistrationController::registerAction',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/woodstack/register',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),

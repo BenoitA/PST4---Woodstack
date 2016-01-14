@@ -36,7 +36,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = [];
+    public static $lazyPropertiesDefaults = array();
 
 
 
@@ -64,10 +64,10 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published'];
+            return array('__isInitialized__', 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published');
         }
 
-        return ['__isInitialized__', 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published'];
+        return array('__isInitialized__', 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published');
     }
 
     /**
@@ -97,7 +97,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
     }
 
     /**
@@ -105,7 +105,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
     }
 
     /**
@@ -183,7 +183,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function setDate($date)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDate', [$date]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDate', array($date));
 
         return parent::setDate($date);
     }
@@ -205,7 +205,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function getDate()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDate', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDate', array());
 
         return parent::getDate();
     }
@@ -216,7 +216,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function setTitle($title)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTitle', [$title]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTitle', array($title));
 
         return parent::setTitle($title);
     }
@@ -227,7 +227,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function getTitle()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTitle', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTitle', array());
 
         return parent::getTitle();
     }
@@ -238,7 +238,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function setAuthor($author)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAuthor', [$author]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAuthor', array($author));
 
         return parent::setAuthor($author);
     }
@@ -249,7 +249,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function getAuthor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAuthor', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAuthor', array());
 
         return parent::getAuthor();
     }
@@ -260,7 +260,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function setContent($content)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setContent', [$content]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setContent', array($content));
 
         return parent::setContent($content);
     }
@@ -271,7 +271,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function getContent()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getContent', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getContent', array());
 
         return parent::getContent();
     }
@@ -282,7 +282,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function setPublished($published)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPublished', [$published]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPublished', array($published));
 
         return parent::setPublished($published);
     }
@@ -293,7 +293,7 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function getPublished()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPublished', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPublished', array());
 
         return parent::getPublished();
     }

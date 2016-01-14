@@ -36,7 +36,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = [];
+    public static $lazyPropertiesDefaults = array();
 
 
 
@@ -64,10 +64,10 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'id', 'login', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt'];
+            return array('__isInitialized__', 'id', 'login', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
         }
 
-        return ['__isInitialized__', 'id', 'login', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt'];
+        return array('__isInitialized__', 'id', 'login', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
     }
 
     /**
@@ -97,7 +97,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
     }
 
     /**
@@ -105,7 +105,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
     }
 
     /**
@@ -183,7 +183,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setLogin($login)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLogin', [$login]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLogin', array($login));
 
         return parent::setLogin($login);
     }
@@ -205,7 +205,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getLogin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLogin', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLogin', array());
 
         return parent::getLogin();
     }
@@ -216,7 +216,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setPassword($password)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', [$password]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', array($password));
 
         return parent::setPassword($password);
     }
@@ -227,7 +227,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getPassword()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', array());
 
         return parent::getPassword();
     }
@@ -238,7 +238,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function addRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRole', [$role]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRole', array($role));
 
         return parent::addRole($role);
     }
@@ -249,7 +249,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function serialize()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', array());
 
         return parent::serialize();
     }
@@ -260,7 +260,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function unserialize($serialized)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', [$serialized]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', array($serialized));
 
         return parent::unserialize($serialized);
     }
@@ -271,7 +271,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function eraseCredentials()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', array());
 
         return parent::eraseCredentials();
     }
@@ -282,7 +282,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getUsername()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', array());
 
         return parent::getUsername();
     }
@@ -293,7 +293,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getUsernameCanonical()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsernameCanonical', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsernameCanonical', array());
 
         return parent::getUsernameCanonical();
     }
@@ -304,7 +304,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getSalt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', array());
 
         return parent::getSalt();
     }
@@ -315,7 +315,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getEmail()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', array());
 
         return parent::getEmail();
     }
@@ -326,7 +326,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getEmailCanonical()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmailCanonical', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmailCanonical', array());
 
         return parent::getEmailCanonical();
     }
@@ -337,7 +337,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getPlainPassword()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlainPassword', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlainPassword', array());
 
         return parent::getPlainPassword();
     }
@@ -348,7 +348,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getLastLogin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastLogin', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastLogin', array());
 
         return parent::getLastLogin();
     }
@@ -359,7 +359,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getConfirmationToken()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getConfirmationToken', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getConfirmationToken', array());
 
         return parent::getConfirmationToken();
     }
@@ -370,7 +370,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getRoles()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', array());
 
         return parent::getRoles();
     }
@@ -381,7 +381,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function hasRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasRole', [$role]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasRole', array($role));
 
         return parent::hasRole($role);
     }
@@ -392,7 +392,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isAccountNonExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonExpired', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonExpired', array());
 
         return parent::isAccountNonExpired();
     }
@@ -403,7 +403,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isAccountNonLocked()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonLocked', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonLocked', array());
 
         return parent::isAccountNonLocked();
     }
@@ -414,7 +414,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isCredentialsNonExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsNonExpired', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsNonExpired', array());
 
         return parent::isCredentialsNonExpired();
     }
@@ -425,7 +425,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isCredentialsExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsExpired', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsExpired', array());
 
         return parent::isCredentialsExpired();
     }
@@ -436,7 +436,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isEnabled()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isEnabled', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isEnabled', array());
 
         return parent::isEnabled();
     }
@@ -447,7 +447,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExpired', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExpired', array());
 
         return parent::isExpired();
     }
@@ -458,7 +458,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isLocked()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isLocked', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isLocked', array());
 
         return parent::isLocked();
     }
@@ -469,7 +469,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isSuperAdmin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isSuperAdmin', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isSuperAdmin', array());
 
         return parent::isSuperAdmin();
     }
@@ -480,7 +480,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isUser(\FOS\UserBundle\Model\UserInterface $user = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isUser', [$user]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isUser', array($user));
 
         return parent::isUser($user);
     }
@@ -491,7 +491,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function removeRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeRole', [$role]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeRole', array($role));
 
         return parent::removeRole($role);
     }
@@ -502,7 +502,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setUsername($username)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsername', [$username]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsername', array($username));
 
         return parent::setUsername($username);
     }
@@ -513,7 +513,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setUsernameCanonical($usernameCanonical)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsernameCanonical', [$usernameCanonical]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsernameCanonical', array($usernameCanonical));
 
         return parent::setUsernameCanonical($usernameCanonical);
     }
@@ -524,7 +524,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setCredentialsExpireAt(\DateTime $date)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpireAt', [$date]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpireAt', array($date));
 
         return parent::setCredentialsExpireAt($date);
     }
@@ -535,7 +535,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setCredentialsExpired($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpired', [$boolean]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpired', array($boolean));
 
         return parent::setCredentialsExpired($boolean);
     }
@@ -546,7 +546,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setEmail($email)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', [$email]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', array($email));
 
         return parent::setEmail($email);
     }
@@ -557,7 +557,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setEmailCanonical($emailCanonical)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmailCanonical', [$emailCanonical]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmailCanonical', array($emailCanonical));
 
         return parent::setEmailCanonical($emailCanonical);
     }
@@ -568,7 +568,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setEnabled($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEnabled', [$boolean]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEnabled', array($boolean));
 
         return parent::setEnabled($boolean);
     }
@@ -579,7 +579,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setExpired($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpired', [$boolean]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpired', array($boolean));
 
         return parent::setExpired($boolean);
     }
@@ -590,7 +590,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setExpiresAt(\DateTime $date)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', [$date]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', array($date));
 
         return parent::setExpiresAt($date);
     }
@@ -601,7 +601,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setSuperAdmin($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSuperAdmin', [$boolean]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSuperAdmin', array($boolean));
 
         return parent::setSuperAdmin($boolean);
     }
@@ -612,7 +612,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setPlainPassword($password)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlainPassword', [$password]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlainPassword', array($password));
 
         return parent::setPlainPassword($password);
     }
@@ -623,7 +623,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setLastLogin(\DateTime $time)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastLogin', [$time]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastLogin', array($time));
 
         return parent::setLastLogin($time);
     }
@@ -634,7 +634,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setLocked($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocked', [$boolean]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocked', array($boolean));
 
         return parent::setLocked($boolean);
     }
@@ -645,7 +645,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setConfirmationToken($confirmationToken)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setConfirmationToken', [$confirmationToken]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setConfirmationToken', array($confirmationToken));
 
         return parent::setConfirmationToken($confirmationToken);
     }
@@ -656,7 +656,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setPasswordRequestedAt(\DateTime $date = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPasswordRequestedAt', [$date]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPasswordRequestedAt', array($date));
 
         return parent::setPasswordRequestedAt($date);
     }
@@ -667,7 +667,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getPasswordRequestedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPasswordRequestedAt', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPasswordRequestedAt', array());
 
         return parent::getPasswordRequestedAt();
     }
@@ -678,7 +678,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function isPasswordRequestNonExpired($ttl)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isPasswordRequestNonExpired', [$ttl]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isPasswordRequestNonExpired', array($ttl));
 
         return parent::isPasswordRequestNonExpired($ttl);
     }
@@ -689,7 +689,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function setRoles(array $roles)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRoles', [$roles]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRoles', array($roles));
 
         return parent::setRoles($roles);
     }
@@ -700,7 +700,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getGroups()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroups', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroups', array());
 
         return parent::getGroups();
     }
@@ -711,7 +711,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function getGroupNames()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupNames', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupNames', array());
 
         return parent::getGroupNames();
     }
@@ -722,7 +722,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function hasGroup($name)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasGroup', [$name]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasGroup', array($name));
 
         return parent::hasGroup($name);
     }
@@ -733,7 +733,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function addGroup(\FOS\UserBundle\Model\GroupInterface $group)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addGroup', [$group]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addGroup', array($group));
 
         return parent::addGroup($group);
     }
@@ -744,7 +744,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function removeGroup(\FOS\UserBundle\Model\GroupInterface $group)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeGroup', [$group]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeGroup', array($group));
 
         return parent::removeGroup($group);
     }
@@ -755,7 +755,7 @@ class User extends \WS\WoodstackBundle\Entity\User implements \Doctrine\ORM\Prox
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
 
         return parent::__toString();
     }

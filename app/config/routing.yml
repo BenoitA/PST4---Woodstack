@@ -1,6 +1,3 @@
-default:
-    pattern:  /{_controller}
-    
 ws_woodstack:
     resource: "@WSWoodstackBundle/Resources/config/routing.yml"
     prefix:   /woodstack

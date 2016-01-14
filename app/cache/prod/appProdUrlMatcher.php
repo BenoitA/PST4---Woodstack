@@ -27,11 +27,6 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
-        // default
-        if (preg_match('#^/(?P<_controller>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'default')), array ());
-        }
-
         if (0 === strpos($pathinfo, '/woodstack')) {
             // ws_woodstack_home
             if (rtrim($pathinfo, '/') === '/woodstack') {
