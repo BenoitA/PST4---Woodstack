@@ -21,6 +21,8 @@ namespace Symfony\Component\Debug;
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Christophe Coevoet <stof@notk.org>
  * @author Nicolas Grekas <p@tchwork.com>
+ *
+ * @api
  */
 class DebugClassLoader
 {
@@ -36,6 +38,8 @@ class DebugClassLoader
      * Constructor.
      *
      * @param callable|object $classLoader Passing an object is @deprecated since version 2.5 and support for it will be removed in 3.0
+     *
+     * @api
      */
     public function __construct($classLoader)
     {
@@ -147,7 +151,7 @@ class DebugClassLoader
         try {
             if ($this->isFinder) {
                 if ($file = $this->classLoader[0]->findFile($class)) {
-                    require_once $file;
+                    require $file;
                 }
             } else {
                 call_user_func($this->classLoader, $class);

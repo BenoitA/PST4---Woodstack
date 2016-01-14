@@ -45,7 +45,7 @@ class Driver extends AbstractPostgreSQLDriver
                 $driverOptions
             );
 
-            if (defined('PDO::PGSQL_ATTR_DISABLE_PREPARES')
+            if (PHP_VERSION_ID >= 50600
                 && (! isset($driverOptions[PDO::PGSQL_ATTR_DISABLE_PREPARES])
                     || true === $driverOptions[PDO::PGSQL_ATTR_DISABLE_PREPARES]
                 )

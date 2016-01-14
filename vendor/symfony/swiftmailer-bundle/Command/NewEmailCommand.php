@@ -15,9 +15,6 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Helper\DialogHelper;
-use Symfony\Component\Console\Helper\QuestionHelper;
-use Symfony\Component\Console\Question\Question;
 
 /**
  * A console command for creating and sending simple emails
@@ -61,7 +58,7 @@ EOF
     {
         $mailerServiceName = sprintf('swiftmailer.mailer.%s', $input->getOption('mailer'));
         if (!$this->getContainer()->has($mailerServiceName)) {
-            throw new \InvalidArgumentException(sprintf('The mailer "%s" does not exist', $input->getOption('mailer')));
+            throw new \InvalidArgumentException(sprintf('The mailer "%s" does not exist', $this->getOption('mailer')));
         }
         switch ($input->getOption('body-source')) {
             case 'file':
@@ -88,19 +85,12 @@ EOF
      */
     protected function interact(InputInterface $input, OutputInterface $output)
     {
-        // Symfony <2.5 BC
-        /** @var QuestionHelper|DialogHelper $questionHelper */
-        $questionHelper = $this->getHelperSet()->has('question') ? $this->getHelperSet()->get('question') : $this->getHelperSet()->get('dialog');
-
+        $dialog = $this->getHelper('dialog');
         foreach ($input->getOptions() as $option => $value) {
             if ($value === null) {
-                // Symfony <2.5 BC
-                if ($questionHelper instanceof QuestionHelper) {
-                    $question = new Question(sprintf('<question>%s</question>: ', ucfirst($option)));
-                } else {
-                    $question = sprintf('<question>%s</question>: ', ucfirst($option));
-                }
-                $input->setOption($option, $questionHelper->ask($input, $output, $question));
+                $input->setOption($option, $dialog->ask($output,
+                    sprintf('<question>%s</question>: ', ucfirst($option))
+                ));
             }
         }
     }

@@ -685,17 +685,17 @@ class FrameworkExtension extends Extension
 
             $dirs[] = dirname($r->getFileName()).'/../Resources/translations';
         }
-        $rootDir = $container->getParameter('kernel.root_dir');
+        $overridePath = $container->getParameter('kernel.root_dir').'/Resources/%s/translations';
         foreach ($container->getParameter('kernel.bundles') as $bundle => $class) {
             $reflection = new \ReflectionClass($class);
             if (is_dir($dir = dirname($reflection->getFileName()).'/Resources/translations')) {
                 $dirs[] = $dir;
             }
-            if (is_dir($dir = $rootDir.sprintf('/Resources/%s/translations', $bundle))) {
+            if (is_dir($dir = sprintf($overridePath, $bundle))) {
                 $dirs[] = $dir;
             }
         }
-        if (is_dir($dir = $rootDir.'/Resources/translations')) {
+        if (is_dir($dir = $container->getParameter('kernel.root_dir').'/Resources/translations')) {
             $dirs[] = $dir;
         }
 

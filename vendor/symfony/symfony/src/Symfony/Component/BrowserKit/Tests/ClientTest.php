@@ -73,18 +73,27 @@ EOF;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @covers Symfony\Component\BrowserKit\Client::getHistory
+     */
     public function testGetHistory()
     {
         $client = new TestClient(array(), $history = new History());
         $this->assertSame($history, $client->getHistory(), '->getHistory() returns the History');
     }
 
+    /**
+     * @covers Symfony\Component\BrowserKit\Client::getCookieJar
+     */
     public function testGetCookieJar()
     {
         $client = new TestClient(array(), null, $cookieJar = new CookieJar());
         $this->assertSame($cookieJar, $client->getCookieJar(), '->getCookieJar() returns the CookieJar');
     }
 
+    /**
+     * @covers Symfony\Component\BrowserKit\Client::getRequest
+     */
     public function testGetRequest()
     {
         $client = new TestClient();
@@ -131,6 +140,9 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($json, $client->getRequest()->getContent());
     }
 
+    /**
+     * @covers Symfony\Component\BrowserKit\Client::getCrawler
+     */
     public function testGetCrawler()
     {
         $client = new TestClient();
@@ -623,25 +635,5 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('HTTPS', $server);
         $this->assertFalse($server['HTTPS']);
-    }
-
-    public function testInternalRequest()
-    {
-        $client = new TestClient();
-
-        $client->request('GET', 'https://www.example.com/https/www.example.com', array(), array(), array(
-            'HTTP_HOST' => 'testhost',
-            'HTTP_USER_AGENT' => 'testua',
-            'HTTPS' => false,
-            'NEW_SERVER_KEY' => 'new-server-key-value',
-        ));
-
-        $this->assertInstanceOf('Symfony\Component\BrowserKit\Request', $client->getInternalRequest());
-    }
-
-    public function testInternalRequestNull()
-    {
-        $client = new TestClient();
-        $this->assertNull($client->getInternalRequest());
     }
 }
