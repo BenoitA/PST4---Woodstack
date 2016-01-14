@@ -1,5 +1,10 @@
 # This file is auto-generated during the composer install
 parameters:
+#    database_host: 127.0.0.1
+#    database_port: 3306
+#    database_name: symfony
+#    database_user: root
+#    database_password: root
     database_host: 5.10.125.192
     database_port: 50000
     database_name: symfony
