@@ -1,10 +1,29 @@
 # This file is auto-generated during the composer install
+# mysql://b7f0fe187b2406:cec1a983@eu-cdbr-west-01.cleardb.com/heroku_cb767f246fb354c?reconnect=true
+#
+# mysql://user:pass@us-cdbr-east.cleardb.com
+
 parameters:
-    database_host: 5.10.125.192
-    database_port: 50000
-    database_name: symfony
-    database_user: user03890
-    database_password: xdQXE51b9k5T
+#    Config qui doit dater d'IBM Bluemix
+#    database_host: 5.10.125.192
+#    database_port: 50000
+#    database_name: symfony
+#    database_user: user03890
+#    database_password: xdQXE51b9k5T
+#
+#    Config locale
+#    database_host: 127.0.0.1
+#    database_port: 3306
+#    database_name: symfony
+#    database_user: root
+#    database_password: root
+#
+#    Config heroku clearDB
+    database_host: eu-cdbr-west-01.cleardb.com/
+    database_port: 
+    database_name: heroku_cb767f246fb354c
+    database_user: b7f0fe187b2406
+    database_password: cec1a983
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
