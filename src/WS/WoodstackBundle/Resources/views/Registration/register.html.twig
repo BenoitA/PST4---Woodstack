@@ -10,9 +10,9 @@
 	<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" style="width:200px">
     	
     		
-    		<td>{{ form_errors(form.username) }}</td>
+    		<td>{{ form_errors(form.login) }}</td>
                 <td>Nom d'utilisateur :</td>
-                <td>{{ form_widget(form.username) }}</td>
+                <td>{{ form_widget(form.login) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.email) }}</td>
