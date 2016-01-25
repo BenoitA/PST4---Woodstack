@@ -20,7 +20,7 @@ parameters:
 #
 #    Config heroku clearDB
     database_host: eu-cdbr-west-01.cleardb.com/
-#    database_port: 
+    database_port: 
     database_name: heroku_cb767f246fb354c
     database_user: b7f0fe187b2406
     database_password: cec1a983
