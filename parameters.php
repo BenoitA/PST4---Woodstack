@@ -1,7 +1,7 @@
 <?php
 
 // Using ClearDB for mysql database
-$db = parse_url($_ENV['CLEARDB_DATABASE_URL']); 
+$db = parse_url($_ENV['mysql://b7f0fe187b2406:cec1a983@eu-cdbr-west-01.cleardb.com/heroku_cb767f246fb354c?reconnect=true']); 
 $container->setParameter('database_driver', 'pdo_mysql'); 
 $container->setParameter('database_host', $db['host']); 
 $container->setParameter('database_port', '~');
