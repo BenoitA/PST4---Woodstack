@@ -26,11 +26,11 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
-    <parameter key="database_host">eu-cdbr-west-01.cleardb.com/</parameter>
-    <parameter key="database_port">null</parameter>
-    <parameter key="database_name">heroku_cb767f246fb354c</parameter>
-    <parameter key="database_user">b7f0fe187b2406</parameter>
-    <parameter key="database_password">cec1a983</parameter>
+    <parameter key="database_host">127.0.0.1</parameter>
+    <parameter key="database_port">3306</parameter>
+    <parameter key="database_name">symfony</parameter>
+    <parameter key="database_user">root</parameter>
+    <parameter key="database_password">root</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -2132,7 +2132,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>56a0e1a093ac00.27869602</argument>
+            <argument>56a644f9950c73.30655505</argument>
           </service>
         </argument>
       </argument>
@@ -2415,7 +2415,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>56a0e1a093ac00.27869602</argument>
+            <argument>56a644f9950c73.30655505</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2898,11 +2898,11 @@
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection">
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
-        <argument key="host">eu-cdbr-west-01.cleardb.com/</argument>
-        <argument key="port">null</argument>
-        <argument key="dbname">heroku_cb767f246fb354c</argument>
-        <argument key="user">b7f0fe187b2406</argument>
-        <argument key="password">cec1a983</argument>
+        <argument key="host">127.0.0.1</argument>
+        <argument key="port">3306</argument>
+        <argument key="dbname">symfony</argument>
+        <argument key="user">root</argument>
+        <argument key="password">root</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
