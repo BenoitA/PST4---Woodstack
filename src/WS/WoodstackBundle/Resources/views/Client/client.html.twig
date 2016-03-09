@@ -1,0 +1,16 @@
+{% extends "WSWoodstackBundle::layout.html.twig" %}
+
+{% block title %}
+	WoodStack  
+{% endblock %}
+
+{% block fos_user_content %}
+
+<p>Veuillez ajouter un nouveau client.</p>
+<center>
+	<div class="well">
+		{{ form(form) }}
+	</div>
+</center>
+
+{% endblock fos_user_content %}	

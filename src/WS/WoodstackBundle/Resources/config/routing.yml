@@ -15,3 +15,9 @@ ws_woodstack_register:
     defaults: { _controller:WSWoodstackBundle:Registration:register }
     requirements:
       id: \d+
+
+ws_woodstack_client:
+    path:    /client
+    defaults:  { _controller:WSWoodstackBundle:Client:client }
+    requirements:
+      id: \d+

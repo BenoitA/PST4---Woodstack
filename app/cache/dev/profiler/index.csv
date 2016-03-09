@@ -1,0 +1,12 @@
+68b7f9,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1457531379,,200
+a15c51,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/login,1457531385,,200
+28de08,::1,POST,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/login_check,1457531392,,302
+2b579b,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack,1457531392,,301
+86300f,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1457531392,,200
+836e26,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531397,,200
+5afe10,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531420,0d3e35,200
+0d3e35,::1,POST,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531420,,500
+2f0a76,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531677,8badd4,200
+8badd4,::1,POST,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531678,,500
+a3d754,::1,POST,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client,1457531747,,302
+c429fd,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/client?id=5,1457531747,,200
