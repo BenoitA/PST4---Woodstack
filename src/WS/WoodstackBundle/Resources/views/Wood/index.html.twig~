@@ -1,0 +1,5 @@
+{% extends "WSWoodstackBundle::layout.html.twig" %}
+
+{% block title %}
+	WoodStack 
+{% endblock %}
