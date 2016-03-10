@@ -20,8 +20,8 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d79a453f5033ac44ae88557236a027618021a16c78739955fec32df5c3961771 = $this->env->getExtension("native_profiler");
-        $__internal_d79a453f5033ac44ae88557236a027618021a16c78739955fec32df5c3961771->enter($__internal_d79a453f5033ac44ae88557236a027618021a16c78739955fec32df5c3961771_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle::layout.html.twig"));
+        $__internal_b5b87571ec1430e4569a5094e960449c98a1a73d9e95cea66395094a07ec5d57 = $this->env->getExtension("native_profiler");
+        $__internal_b5b87571ec1430e4569a5094e960449c98a1a73d9e95cea66395094a07ec5d57->enter($__internal_b5b87571ec1430e4569a5094e960449c98a1a73d9e95cea66395094a07ec5d57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle::layout.html.twig"));
 
         // line 2
         echo "
@@ -65,30 +65,26 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
             echo "\">WoodStack</a>
 \t\t\t\t</div>
 \t\t\t\t<div id=\"navbar\" class=\"collapse navbar-collapse\">
-\t\t\t\t\t<ul class=\"nav navbar-nav\">
-\t\t\t\t\t\t<li class=\"active\">
-\t\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t
+\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">
+\t\t\t\t\t\t<li><a href=\"";
             // line 36
-            echo $this->env->getExtension('routing')->getPath("ws_woodstack_home");
-            echo "\">Accueil</a>
+            echo $this->env->getExtension('routing')->getPath("ws_woodstack_register");
+            echo "\"><span class=\"glyphicon glyphicon-user\"></span> S'enregistrer</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li><a href=\"";
             // line 38
-            echo $this->env->getExtension('routing')->getPath("ws_woodstack_register");
-            echo "\">S'enregistrer</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li><a href=\"";
-            // line 40
             echo $this->env->getExtension('routing')->getPath("ws_woodstack_login");
-            echo "\">Connexion</a>
+            echo "\"><span class=\"glyphicon glyphicon-log-in\"> Connexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
+\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
         } else {
-            // line 47
+            // line 46
             echo "\t\t<nav class=\"navbar navbar-fixed-top navbar-inverse\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"navbar-header\">
@@ -99,35 +95,42 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 \t\t\t\t\t<span class=\"icon-bar\"></span>
 \t\t\t\t</button>
 \t\t\t\t<a class=\"navbar-brand\" href=\"";
-            // line 56
+            // line 55
             echo $this->env->getExtension('routing')->getPath("ws_woodstack_home");
             echo "\">WoodStack</a>
 \t\t\t\t</div>
 \t\t\t\t<div id=\"navbar\" class=\"collapse navbar-collapse\">
 \t\t\t\t\t<ul class=\"nav navbar-nav\">
 \t\t\t\t\t\t<li class=\"active\">
-\t\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t\t\t<li><a href=\"";
+            // line 60
+            echo $this->env->getExtension('routing')->getPath("ws_woodstack_client");
+            echo "\">Ajouts clients</a></li>
+\t\t\t\t\t\t\t<li><a href=\"";
             // line 61
-            echo $this->env->getExtension('routing')->getPath("ws_woodstack_home");
-            echo "\">Accueil</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li><a href=\"";
-            // line 63
-            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
-            echo "\">Mon profil</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li><a href=\"";
-            // line 65
-            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
-            echo "\">Déconnexion</a>
+            echo $this->env->getExtension('routing')->getPath("ws_woodstack_navbar");
+            echo "\">Profile client</a></li>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
+\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">
+\t\t\t\t\t\t<li><a href=\"";
+            // line 65
+            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
+            echo "\"><span class=\"glyphicon glyphicon-user\"></span>Mon profil</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li><a href=\"";
+            // line 67
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\"><span class=\"glyphicon glyphicon-log-out\"></span>Déconnexion</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t
+    \t\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
         }
-        // line 72
+        // line 75
         echo "\t
 
   <div class=\"container\"> 
@@ -146,33 +149,14 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
    
    <div class=\"container\">
    <div class=\"row\" style=\"left:50em\">
-\t\t";
-        // line 90
-        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 91
-            echo "\t\t\t<div id=\"menu\" class=\"col-md-2\">
-\t\t\t\t<h3>Menu</h3>
-\t\t\t\t<ul class=\"nav nav-pills nav-stacked\" >
-\t\t\t\t\t<li><a href=\"";
-            // line 94
-            echo $this->env->getExtension('routing')->getPath("ws_woodstack_client");
-            echo "\">Ajouts clients</a></li>
-\t\t\t\t\t<li><a href=\"";
-            // line 95
-            echo $this->env->getExtension('routing')->getPath("ws_woodstack_navbar");
-            echo "\">Profile client</a></li>
-\t\t\t\t</ul>
-\t\t\t</div>
-\t\t";
-        }
-        // line 99
-        echo "
+
+
 \t\t\t<div id=\"content\" class=\"col-md-9\" >
 \t\t\t\t
 \t\t\t\t";
-        // line 102
+        // line 97
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 103
+            // line 98
             echo "\t\t\t\t\tBienvenue ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "<br />
@@ -181,19 +165,19 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 \t\t\t\t\t
 \t\t\t\t";
         }
-        // line 108
+        // line 103
         echo "\t\t\t\t
 \t\t\t\t";
-        // line 109
+        // line 104
         $this->displayBlock('body', $context, $blocks);
-        // line 112
+        // line 107
         echo "\t\t\t</div>
 \t\t\t
 \t\t\t<div class=\"col-md-9\">
 \t\t\t\t";
-        // line 115
+        // line 110
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 117
+        // line 112
         echo "\t\t\t</div>
 \t\t\t
 \t\t\t
@@ -203,34 +187,34 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 \t\t\t<p>Auffret - Glaisner - Nurit</p>
 \t\t</footer>
   ";
-        // line 125
+        // line 120
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 131
+        // line 126
         echo "</body>
 </html>
 ";
         
-        $__internal_d79a453f5033ac44ae88557236a027618021a16c78739955fec32df5c3961771->leave($__internal_d79a453f5033ac44ae88557236a027618021a16c78739955fec32df5c3961771_prof);
+        $__internal_b5b87571ec1430e4569a5094e960449c98a1a73d9e95cea66395094a07ec5d57->leave($__internal_b5b87571ec1430e4569a5094e960449c98a1a73d9e95cea66395094a07ec5d57_prof);
 
     }
 
     // line 9
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b21ee5dcfc67feda42ec50cc6384252310649fd37626a591f16c252fddf8f69d = $this->env->getExtension("native_profiler");
-        $__internal_b21ee5dcfc67feda42ec50cc6384252310649fd37626a591f16c252fddf8f69d->enter($__internal_b21ee5dcfc67feda42ec50cc6384252310649fd37626a591f16c252fddf8f69d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6127e9f5aad17fdb7776a50571c88fbd9bfe8de7ae702a0786f18a3e70a0f794 = $this->env->getExtension("native_profiler");
+        $__internal_6127e9f5aad17fdb7776a50571c88fbd9bfe8de7ae702a0786f18a3e70a0f794->enter($__internal_6127e9f5aad17fdb7776a50571c88fbd9bfe8de7ae702a0786f18a3e70a0f794_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "WoodStack";
         
-        $__internal_b21ee5dcfc67feda42ec50cc6384252310649fd37626a591f16c252fddf8f69d->leave($__internal_b21ee5dcfc67feda42ec50cc6384252310649fd37626a591f16c252fddf8f69d_prof);
+        $__internal_6127e9f5aad17fdb7776a50571c88fbd9bfe8de7ae702a0786f18a3e70a0f794->leave($__internal_6127e9f5aad17fdb7776a50571c88fbd9bfe8de7ae702a0786f18a3e70a0f794_prof);
 
     }
 
     // line 11
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_a81caa37cd2a51962ed3d9e25cc48b6c7461e03fb52d91e36082054d7efa5ab5 = $this->env->getExtension("native_profiler");
-        $__internal_a81caa37cd2a51962ed3d9e25cc48b6c7461e03fb52d91e36082054d7efa5ab5->enter($__internal_a81caa37cd2a51962ed3d9e25cc48b6c7461e03fb52d91e36082054d7efa5ab5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_02523360cbefd2b6a61307aa630a8d97cd30586da8ff71fa262791940e5fc0f2 = $this->env->getExtension("native_profiler");
+        $__internal_02523360cbefd2b6a61307aa630a8d97cd30586da8ff71fa262791940e5fc0f2->enter($__internal_02523360cbefd2b6a61307aa630a8d97cd30586da8ff71fa262791940e5fc0f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 12
         echo "    ";
@@ -238,51 +222,51 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
         echo "    <link rel=\"stylesheet\" href=\"/Symfony/PST4---Woodstack/web/css/bootstrap.min.css\">
   ";
         
-        $__internal_a81caa37cd2a51962ed3d9e25cc48b6c7461e03fb52d91e36082054d7efa5ab5->leave($__internal_a81caa37cd2a51962ed3d9e25cc48b6c7461e03fb52d91e36082054d7efa5ab5_prof);
+        $__internal_02523360cbefd2b6a61307aa630a8d97cd30586da8ff71fa262791940e5fc0f2->leave($__internal_02523360cbefd2b6a61307aa630a8d97cd30586da8ff71fa262791940e5fc0f2_prof);
 
     }
 
-    // line 109
+    // line 104
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ad843ea9206c2a6d3494b310c34c0768fabc94aa75ea014ad8f343c7f5f336b0 = $this->env->getExtension("native_profiler");
-        $__internal_ad843ea9206c2a6d3494b310c34c0768fabc94aa75ea014ad8f343c7f5f336b0->enter($__internal_ad843ea9206c2a6d3494b310c34c0768fabc94aa75ea014ad8f343c7f5f336b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5876191d3f3bba8bd114f2ce148c6b980f4fefbbe561666794e4c0a10991b95d = $this->env->getExtension("native_profiler");
+        $__internal_5876191d3f3bba8bd114f2ce148c6b980f4fefbbe561666794e4c0a10991b95d->enter($__internal_5876191d3f3bba8bd114f2ce148c6b980f4fefbbe561666794e4c0a10991b95d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 110
+        // line 105
         echo "\t\t\t\t\t
 \t\t\t\t";
         
-        $__internal_ad843ea9206c2a6d3494b310c34c0768fabc94aa75ea014ad8f343c7f5f336b0->leave($__internal_ad843ea9206c2a6d3494b310c34c0768fabc94aa75ea014ad8f343c7f5f336b0_prof);
+        $__internal_5876191d3f3bba8bd114f2ce148c6b980f4fefbbe561666794e4c0a10991b95d->leave($__internal_5876191d3f3bba8bd114f2ce148c6b980f4fefbbe561666794e4c0a10991b95d_prof);
 
     }
 
-    // line 115
+    // line 110
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_d7d130aa7f5697fc4b7efa2401a5fe7953825c4877fac493bf86cf6b169b25c6 = $this->env->getExtension("native_profiler");
-        $__internal_d7d130aa7f5697fc4b7efa2401a5fe7953825c4877fac493bf86cf6b169b25c6->enter($__internal_d7d130aa7f5697fc4b7efa2401a5fe7953825c4877fac493bf86cf6b169b25c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_4b3e36f339fbcc63d8d847b480e7d82b193733ccd777ade249cead9521bc20d7 = $this->env->getExtension("native_profiler");
+        $__internal_4b3e36f339fbcc63d8d847b480e7d82b193733ccd777ade249cead9521bc20d7->enter($__internal_4b3e36f339fbcc63d8d847b480e7d82b193733ccd777ade249cead9521bc20d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 116
+        // line 111
         echo "\t\t\t\t";
         
-        $__internal_d7d130aa7f5697fc4b7efa2401a5fe7953825c4877fac493bf86cf6b169b25c6->leave($__internal_d7d130aa7f5697fc4b7efa2401a5fe7953825c4877fac493bf86cf6b169b25c6_prof);
+        $__internal_4b3e36f339fbcc63d8d847b480e7d82b193733ccd777ade249cead9521bc20d7->leave($__internal_4b3e36f339fbcc63d8d847b480e7d82b193733ccd777ade249cead9521bc20d7_prof);
 
     }
 
-    // line 125
+    // line 120
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_15b2c48ba1e501e2125e218beab28ba70a8248299fed285b499ea1df74a56446 = $this->env->getExtension("native_profiler");
-        $__internal_15b2c48ba1e501e2125e218beab28ba70a8248299fed285b499ea1df74a56446->enter($__internal_15b2c48ba1e501e2125e218beab28ba70a8248299fed285b499ea1df74a56446_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e4930a4083111eb429162d18e8b68d4aa66e626095a66fbd675ced88560fcc99 = $this->env->getExtension("native_profiler");
+        $__internal_e4930a4083111eb429162d18e8b68d4aa66e626095a66fbd675ced88560fcc99->enter($__internal_e4930a4083111eb429162d18e8b68d4aa66e626095a66fbd675ced88560fcc99_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 126
+        // line 121
         echo "\t";
-        // line 128
+        // line 123
         echo "\t\t<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
 \t\t<script src=\"/Symfony/PST4---Woodstack/web/js/bootstrap.min.js\"></script>
 \t";
         
-        $__internal_15b2c48ba1e501e2125e218beab28ba70a8248299fed285b499ea1df74a56446->leave($__internal_15b2c48ba1e501e2125e218beab28ba70a8248299fed285b499ea1df74a56446_prof);
+        $__internal_e4930a4083111eb429162d18e8b68d4aa66e626095a66fbd675ced88560fcc99->leave($__internal_e4930a4083111eb429162d18e8b68d4aa66e626095a66fbd675ced88560fcc99_prof);
 
     }
 
@@ -298,7 +282,7 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 
     public function getDebugInfo()
     {
-        return array (  281 => 128,  279 => 126,  273 => 125,  266 => 116,  260 => 115,  252 => 110,  246 => 109,  238 => 13,  236 => 12,  230 => 11,  218 => 9,  209 => 131,  207 => 125,  197 => 117,  195 => 115,  190 => 112,  188 => 109,  185 => 108,  176 => 103,  174 => 102,  169 => 99,  162 => 95,  158 => 94,  153 => 91,  151 => 90,  131 => 72,  121 => 65,  116 => 63,  111 => 61,  103 => 56,  92 => 47,  82 => 40,  77 => 38,  72 => 36,  64 => 31,  52 => 21,  50 => 20,  43 => 15,  41 => 11,  36 => 9,  27 => 2,);
+        return array (  265 => 123,  263 => 121,  257 => 120,  250 => 111,  244 => 110,  236 => 105,  230 => 104,  222 => 13,  220 => 12,  214 => 11,  202 => 9,  193 => 126,  191 => 120,  181 => 112,  179 => 110,  174 => 107,  172 => 104,  169 => 103,  160 => 98,  158 => 97,  134 => 75,  123 => 67,  118 => 65,  111 => 61,  107 => 60,  99 => 55,  88 => 46,  77 => 38,  72 => 36,  64 => 31,  52 => 21,  50 => 20,  43 => 15,  41 => 11,  36 => 9,  27 => 2,);
     }
 }
 /* {# app/Resources/views/layout.html.twig #}*/
@@ -334,15 +318,14 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 /* 				<a class="navbar-brand" href="{{ path('ws_woodstack_home') }}">WoodStack</a>*/
 /* 				</div>*/
 /* 				<div id="navbar" class="collapse navbar-collapse">*/
-/* 					<ul class="nav navbar-nav">*/
-/* 						<li class="active">*/
-/* 							<a href="{{ path('ws_woodstack_home') }}">Accueil</a>*/
+/* 					*/
+/* 					<ul class="nav navbar-nav navbar-right">*/
+/* 						<li><a href="{{ path('ws_woodstack_register') }}"><span class="glyphicon glyphicon-user"></span> S'enregistrer</a>*/
 /* 						</li>*/
-/* 						<li><a href="{{ path('ws_woodstack_register') }}">S'enregistrer</a>*/
-/* 						</li>*/
-/* 						<li><a href="{{ path('ws_woodstack_login') }}">Connexion</a>*/
+/* 						<li><a href="{{ path('ws_woodstack_login') }}"><span class="glyphicon glyphicon-log-in"> Connexion</a>*/
 /* 						</li>*/
 /* 					</ul>*/
+/* 				*/
 /* 				</div>*/
 /* 			</div>*/
 /* 		</nav>*/
@@ -361,13 +344,17 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 /* 				<div id="navbar" class="collapse navbar-collapse">*/
 /* 					<ul class="nav navbar-nav">*/
 /* 						<li class="active">*/
-/* 							<a href="{{ path('ws_woodstack_home') }}">Accueil</a>*/
-/* 						</li>*/
-/* 						<li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a>*/
-/* 						</li>*/
-/* 						<li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>*/
+/* 							<li><a href="{{ path('ws_woodstack_client') }}">Ajouts clients</a></li>*/
+/* 							<li><a href="{{ path('ws_woodstack_navbar') }}">Profile client</a></li>*/
 /* 						</li>*/
 /* 					</ul>*/
+/* 					<ul class="nav navbar-nav navbar-right">*/
+/* 						<li><a href="{{ path('fos_user_profile_show') }}"><span class="glyphicon glyphicon-user"></span>Mon profil</a>*/
+/* 						</li>*/
+/* 						<li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-log-out"></span>Déconnexion</a>*/
+/* 						</li>*/
+/* 					*/
+/*     					*/
 /* 				</div>*/
 /* 			</div>*/
 /* 		</nav>*/
@@ -390,15 +377,7 @@ class __TwigTemplate_1777012592e350226edc26d7e2978de7abcb74facc730c3dc4b88b09508
 /*    */
 /*    <div class="container">*/
 /*    <div class="row" style="left:50em">*/
-/* 		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
-/* 			<div id="menu" class="col-md-2">*/
-/* 				<h3>Menu</h3>*/
-/* 				<ul class="nav nav-pills nav-stacked" >*/
-/* 					<li><a href="{{ path('ws_woodstack_client') }}">Ajouts clients</a></li>*/
-/* 					<li><a href="{{ path('ws_woodstack_navbar') }}">Profile client</a></li>*/
-/* 				</ul>*/
-/* 			</div>*/
-/* 		{% endif %}*/
+/* */
 /* */
 /* 			<div id="content" class="col-md-9" >*/
 /* 				*/
