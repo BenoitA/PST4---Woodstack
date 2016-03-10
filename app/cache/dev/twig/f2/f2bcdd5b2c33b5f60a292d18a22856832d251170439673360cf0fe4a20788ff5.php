@@ -15,8 +15,8 @@ class __TwigTemplate_0f047331f8f63ee346460867326b399629414f95623bce74e39cfa79d62
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7f60889c38434d2fe529ac78bc5d71e50d7fef3a6ee0a438c912c0f258ac8e61 = $this->env->getExtension("native_profiler");
-        $__internal_7f60889c38434d2fe529ac78bc5d71e50d7fef3a6ee0a438c912c0f258ac8e61->enter($__internal_7f60889c38434d2fe529ac78bc5d71e50d7fef3a6ee0a438c912c0f258ac8e61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:list_content.html.twig"));
+        $__internal_37c62ac4a21c5be0e03fd62c5824a7815b6e75561e3aec239f503f4f677ac757 = $this->env->getExtension("native_profiler");
+        $__internal_37c62ac4a21c5be0e03fd62c5824a7815b6e75561e3aec239f503f4f677ac757->enter($__internal_37c62ac4a21c5be0e03fd62c5824a7815b6e75561e3aec239f503f4f677ac757_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:list_content.html.twig"));
 
         // line 1
         echo "<div class=\"fos_user_group_list\">
@@ -42,7 +42,7 @@ class __TwigTemplate_0f047331f8f63ee346460867326b399629414f95623bce74e39cfa79d62
 </div>
 ";
         
-        $__internal_7f60889c38434d2fe529ac78bc5d71e50d7fef3a6ee0a438c912c0f258ac8e61->leave($__internal_7f60889c38434d2fe529ac78bc5d71e50d7fef3a6ee0a438c912c0f258ac8e61_prof);
+        $__internal_37c62ac4a21c5be0e03fd62c5824a7815b6e75561e3aec239f503f4f677ac757->leave($__internal_37c62ac4a21c5be0e03fd62c5824a7815b6e75561e3aec239f503f4f677ac757_prof);
 
     }
 
