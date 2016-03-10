@@ -21,3 +21,9 @@ ws_woodstack_client:
     defaults:  { _controller:WSWoodstackBundle:Client:client }
     requirements:
       id: \d+
+
+ws_woodstack_navbar:
+    path:    /Navigation
+    defaults: { _controller:WSWoodstackBundle:Navbar:navbar, page:1 }
+    requirements:
+      id: \d+

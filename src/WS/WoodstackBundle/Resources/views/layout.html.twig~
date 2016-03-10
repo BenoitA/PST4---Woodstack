@@ -1,0 +1,133 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}WoodStack{% endblock %}</title>
+
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="/Symfony/PST4---Woodstack/web/css/bootstrap.min.css">
+  {% endblock %}
+  
+</head>
+
+<body style="padding-top: 70px;">
+	
+	{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{ path('ws_woodstack_home') }}">WoodStack</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="{{ path('ws_woodstack_home') }}">Accueil</a>
+						</li>
+						<li><a href="{{ path('ws_woodstack_register') }}">S'enregistrer</a>
+						</li>
+						<li><a href="{{ path('ws_woodstack_login') }}">Connexion</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		{% else %}
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{ path('ws_woodstack_home') }}">WoodStack</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="{{ path('ws_woodstack_home') }}">Accueil</a>
+						</li>
+						<li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a>
+						</li>
+						<li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		{% endif %}
+	
+
+  <div class="container"> 
+  
+	<div class="col-xs-12 col-sm-9" style="text-align:center" >
+		<div id="header" class="jumbotron" style="background:lightgreen">
+			<h1 align="center">WoodStack</h1>
+			<p>
+				Ma plateforme de gestion <br />
+				<I>(Ce projet est dans le cadre des PST4 de l'ESIEA)</I>
+			</p>
+      
+		</div>
+	</div>	
+   </div>
+   
+   <div class="container">
+   <div class="row" style="left:50em">
+		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+			<div id="menu" class="col-md-2">
+				<h3>Menu</h3>
+				<ul class="nav nav-pills nav-stacked" >
+					<li><a href="{{ path('fos_user_profile_edit') }}">Edition profil</a></li>
+					<li><a href="{{ path('ws_woodstack_client') }}">Ajouts clients</a></li>
+					<li><a href="#">????</a></li>
+				</ul>
+			</div>
+		{% endif %}
+
+			<div id="content" class="col-md-9" >
+				
+				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+					Bienvenue {{ app.user.username }}<br />
+					
+					
+					
+				{% endif %}
+				
+				{% block body %}
+					
+				{% endblock %}
+			</div>
+			
+			<div class="col-md-9">
+				{% block fos_user_content %}
+				{% endblock fos_user_content %}
+			</div>
+			
+			
+	</div>
+	<hr>
+		<footer style="text-align:center">
+			<p>Auffret - Glaisner - Nurit</p>
+		</footer>
+  {% block javascripts %}
+	{# Ajouter ces lignes javascript pour utiliser des fonctionnalités
+	de bootstrap twitter #}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="/Symfony/PST4---Woodstack/web/js/bootstrap.min.js"></script>
+	{% endblock %}
+</body>
+</html>

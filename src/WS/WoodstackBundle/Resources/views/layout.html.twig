@@ -10,7 +10,7 @@
 
   {% block stylesheets %}
     {# On charge le CSS de bootstrap depuis le site directement #}
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Symfony/PST4---Woodstack/web/css/bootstrap.min.css">
   {% endblock %}
   
 </head>
@@ -93,7 +93,7 @@
 				<ul class="nav nav-pills nav-stacked" >
 					<li><a href="{{ path('fos_user_profile_edit') }}">Edition profil</a></li>
 					<li><a href="{{ path('ws_woodstack_client') }}">Ajouts clients</a></li>
-					<li><a href="#">????</a></li>
+					<li><a href="{{ path('ws_woodstack_navbar') }}">Profile</a></li>
 				</ul>
 			</div>
 		{% endif %}

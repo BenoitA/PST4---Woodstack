@@ -152,6 +152,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'WS\\WoodstackBundle\\Controller\\ClientController::clientAction',  '_route' => 'ws_woodstack_client',);
             }
 
+            // ws_woodstack_navbar
+            if ($pathinfo === '/woodstack/Navigation') {
+                return array (  '_controller' => 'WS\\WoodstackBundle\\Controller\\NavbarController::navbarAction',  'page' => 1,  '_route' => 'ws_woodstack_navbar',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/platform')) {
