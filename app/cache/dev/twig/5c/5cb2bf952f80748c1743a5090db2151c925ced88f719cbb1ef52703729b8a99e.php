@@ -22,34 +22,34 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9 = $this->env->getExtension("native_profiler");
-        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9->enter($__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
+        $__internal_7ebe6e1fa70525a2aa45fe149abfbf2d964adca967c5aa5524c7d44124ba3f9e = $this->env->getExtension("native_profiler");
+        $__internal_7ebe6e1fa70525a2aa45fe149abfbf2d964adca967c5aa5524c7d44124ba3f9e->enter($__internal_7ebe6e1fa70525a2aa45fe149abfbf2d964adca967c5aa5524c7d44124ba3f9e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9->leave($__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9_prof);
+        $__internal_7ebe6e1fa70525a2aa45fe149abfbf2d964adca967c5aa5524c7d44124ba3f9e->leave($__internal_7ebe6e1fa70525a2aa45fe149abfbf2d964adca967c5aa5524c7d44124ba3f9e_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781 = $this->env->getExtension("native_profiler");
-        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781->enter($__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_750223a4a66f41099d2687195a0b753f463c5b759dee6cfed4f9ba38beea08fb = $this->env->getExtension("native_profiler");
+        $__internal_750223a4a66f41099d2687195a0b753f463c5b759dee6cfed4f9ba38beea08fb->enter($__internal_750223a4a66f41099d2687195a0b753f463c5b759dee6cfed4f9ba38beea08fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "\tWoodStack 
 ";
         
-        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781->leave($__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781_prof);
+        $__internal_750223a4a66f41099d2687195a0b753f463c5b759dee6cfed4f9ba38beea08fb->leave($__internal_750223a4a66f41099d2687195a0b753f463c5b759dee6cfed4f9ba38beea08fb_prof);
 
     }
 
     // line 6
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e = $this->env->getExtension("native_profiler");
-        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e->enter($__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_56f5efa8b6fe035e06b67904203e5a31115d1b28f16c4bbc5c5f3c6824ad865e = $this->env->getExtension("native_profiler");
+        $__internal_56f5efa8b6fe035e06b67904203e5a31115d1b28f16c4bbc5c5f3c6824ad865e->enter($__internal_56f5efa8b6fe035e06b67904203e5a31115d1b28f16c4bbc5c5f3c6824ad865e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 7
         if ( !$this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
@@ -65,13 +65,13 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
   <!-- Wrapper for slides -->
   <div class=\"carousel-inner\" role=\"listbox\">
     <div class=\"item active\">
-    <h4>\"This company is the best. I am so happy with the result!\"<br><span style=\"font-style:normal;\">Michael Roe, Vice President, Comment Box</span></h4>
+    <h4>Accessibilité pour tous les commerciaux de l’entreprise</h4>
     </div>
     <div class=\"item\">
-      <h4>\"One word... WOW!!\"<br><span style=\"font-style:normal;\">John Doe, Salesman, Rep Inc</span></h4>
+      <h4>Ameliore l’efficacité des commerciaux</h4>
     </div>
     <div class=\"item\">
-      <h4>\"Could I... BE any more happy with this company?\"<br><span style=\"font-style:normal;\">Chandler Bing, Actor, FriendsAlot</span></h4>/pP
+      <h4>Données clients adaptées à l’entreprise</h4>
     </div>
   </div>
 
@@ -89,7 +89,7 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
         } else {
             // line 40
             echo "
-\t<form class=\"form-inline margform\" role=\"form\" name=\"formulaire\" action=\"connect.php\" method=\"GET\" enctype=\"multipart/form-data\">
+\t<form class=\"form-inline margform\" role=\"form\" name=\"formulaire\" action=\"connect.php\" method=\"POST\" enctype=\"multipart/form-data\">
 \t\t<div class=\"form-group\">
 \t\t\t<label for=\"client\">Nom client :</label>
 \t\t\t<input type=\"text\" class=\"form-control\" name=\"client\" id=\"client\" required placeholder=\"Nom\">
@@ -104,7 +104,7 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 
 ";
         
-        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e->leave($__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e_prof);
+        $__internal_56f5efa8b6fe035e06b67904203e5a31115d1b28f16c4bbc5c5f3c6824ad865e->leave($__internal_56f5efa8b6fe035e06b67904203e5a31115d1b28f16c4bbc5c5f3c6824ad865e_prof);
 
     }
 
@@ -141,13 +141,13 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 /*   <!-- Wrapper for slides -->*/
 /*   <div class="carousel-inner" role="listbox">*/
 /*     <div class="item active">*/
-/*     <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>*/
+/*     <h4>Accessibilité pour tous les commerciaux de l’entreprise</h4>*/
 /*     </div>*/
 /*     <div class="item">*/
-/*       <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>*/
+/*       <h4>Ameliore l’efficacité des commerciaux</h4>*/
 /*     </div>*/
 /*     <div class="item">*/
-/*       <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>/pP*/
+/*       <h4>Données clients adaptées à l’entreprise</h4>*/
 /*     </div>*/
 /*   </div>*/
 /* */
@@ -163,7 +163,7 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 /* </div>*/
 /* {% else %}*/
 /* */
-/* 	<form class="form-inline margform" role="form" name="formulaire" action="connect.php" method="GET" enctype="multipart/form-data">*/
+/* 	<form class="form-inline margform" role="form" name="formulaire" action="connect.php" method="POST" enctype="multipart/form-data">*/
 /* 		<div class="form-group">*/
 /* 			<label for="client">Nom client :</label>*/
 /* 			<input type="text" class="form-control" name="client" id="client" required placeholder="Nom">*/

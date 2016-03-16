@@ -17,3 +17,9 @@ e4c6e5,::1,POST,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodst
 d5df50,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1458134504,,200
 f0dedf,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/connect.php?client=nurit,1458134512,cb4a27,200
 cb4a27,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/connect.php?client=nurit,1458134512,,404
+dfe0fb,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1458134715,,200
+4ab2de,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/logout,1458134718,,302
+1aeb52,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack,1458134718,,301
+9135ca,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1458134718,,200
+579379,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1458134742,,200
+3d57e4,::1,GET,http://localhost/Symfony/PST4---Woodstack/web/app_dev.php/woodstack/,1458134762,,200
