@@ -4,7 +4,7 @@
 	WoodStack 
 {% endblock %}
 {% block fos_user_content %}
-
+{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -36,6 +36,16 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+{% else %}
 
+	<form class="form-inline margform" role="form" name="formulaire" action="connect.php" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="client">Nom client :</label>
+			<input type="text" class="form-control" name="client" id="client" required placeholder="Nom">
+		</div>
+		<button type="submit" class="btn btn-primary">Rechercher</button>
+	</form>
+
+{% endif %}	
 
 {% endblock fos_user_content %}

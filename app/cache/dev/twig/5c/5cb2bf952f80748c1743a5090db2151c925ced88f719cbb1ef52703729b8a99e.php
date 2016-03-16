@@ -22,38 +22,39 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4ebd5882aff30191db2011a72442b2bab6b6fe6eba2d2b7ba13168b15e1cede9 = $this->env->getExtension("native_profiler");
-        $__internal_4ebd5882aff30191db2011a72442b2bab6b6fe6eba2d2b7ba13168b15e1cede9->enter($__internal_4ebd5882aff30191db2011a72442b2bab6b6fe6eba2d2b7ba13168b15e1cede9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
+        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9 = $this->env->getExtension("native_profiler");
+        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9->enter($__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WSWoodstackBundle:Wood:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4ebd5882aff30191db2011a72442b2bab6b6fe6eba2d2b7ba13168b15e1cede9->leave($__internal_4ebd5882aff30191db2011a72442b2bab6b6fe6eba2d2b7ba13168b15e1cede9_prof);
+        $__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9->leave($__internal_31c2d352319d327897971eb5ba864225f75526eefae0d7e9c754a29ebcb606e9_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a9fdd2dc3f2d37abdc9cc14f28bb1d5e8e08f979604f0529b25fa20c57382ef8 = $this->env->getExtension("native_profiler");
-        $__internal_a9fdd2dc3f2d37abdc9cc14f28bb1d5e8e08f979604f0529b25fa20c57382ef8->enter($__internal_a9fdd2dc3f2d37abdc9cc14f28bb1d5e8e08f979604f0529b25fa20c57382ef8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781 = $this->env->getExtension("native_profiler");
+        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781->enter($__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "\tWoodStack 
 ";
         
-        $__internal_a9fdd2dc3f2d37abdc9cc14f28bb1d5e8e08f979604f0529b25fa20c57382ef8->leave($__internal_a9fdd2dc3f2d37abdc9cc14f28bb1d5e8e08f979604f0529b25fa20c57382ef8_prof);
+        $__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781->leave($__internal_805fbcac73f80e4365dee06166a62c090a32c40883a953996709a3ee482b4781_prof);
 
     }
 
     // line 6
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_9b1bb84005287065ab6755b71b8dc138ef1f7411a5aa2766f9c233226d328d2a = $this->env->getExtension("native_profiler");
-        $__internal_9b1bb84005287065ab6755b71b8dc138ef1f7411a5aa2766f9c233226d328d2a->enter($__internal_9b1bb84005287065ab6755b71b8dc138ef1f7411a5aa2766f9c233226d328d2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e = $this->env->getExtension("native_profiler");
+        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e->enter($__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 7
-        echo "
-<div id=\"myCarousel\" class=\"carousel slide text-center\" data-ride=\"carousel\">
+        if ( !$this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 8
+            echo "<div id=\"myCarousel\" class=\"carousel slide text-center\" data-ride=\"carousel\">
   <!-- Indicators -->
   <ol class=\"carousel-indicators\">
     <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
@@ -84,11 +85,26 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
     <span class=\"sr-only\">Next</span>
   </a>
 </div>
+";
+        } else {
+            // line 40
+            echo "
+\t<form class=\"form-inline margform\" role=\"form\" name=\"formulaire\" action=\"connect.php\" method=\"GET\" enctype=\"multipart/form-data\">
+\t\t<div class=\"form-group\">
+\t\t\t<label for=\"client\">Nom client :</label>
+\t\t\t<input type=\"text\" class=\"form-control\" name=\"client\" id=\"client\" required placeholder=\"Nom\">
+\t\t</div>
+\t\t<button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
+\t</form>
 
+";
+        }
+        // line 49
+        echo "\t
 
 ";
         
-        $__internal_9b1bb84005287065ab6755b71b8dc138ef1f7411a5aa2766f9c233226d328d2a->leave($__internal_9b1bb84005287065ab6755b71b8dc138ef1f7411a5aa2766f9c233226d328d2a_prof);
+        $__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e->leave($__internal_11f56fe3da84363831d5d88fca919c5efde3b242968eb788764940ed89195a1e_prof);
 
     }
 
@@ -104,7 +120,7 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 
     public function getDebugInfo()
     {
-        return array (  55 => 7,  49 => 6,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  103 => 49,  91 => 40,  57 => 8,  55 => 7,  49 => 6,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "WSWoodstackBundle::layout.html.twig" %}*/
@@ -113,7 +129,7 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 /* 	WoodStack */
 /* {% endblock %}*/
 /* {% block fos_user_content %}*/
-/* */
+/* {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
 /* <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">*/
 /*   <!-- Indicators -->*/
 /*   <ol class="carousel-indicators">*/
@@ -145,7 +161,17 @@ class __TwigTemplate_334bca12ba62dcb260eb7f30d90d3b172236164266b83e6ac54c3809e0b
 /*     <span class="sr-only">Next</span>*/
 /*   </a>*/
 /* </div>*/
+/* {% else %}*/
 /* */
+/* 	<form class="form-inline margform" role="form" name="formulaire" action="connect.php" method="GET" enctype="multipart/form-data">*/
+/* 		<div class="form-group">*/
+/* 			<label for="client">Nom client :</label>*/
+/* 			<input type="text" class="form-control" name="client" id="client" required placeholder="Nom">*/
+/* 		</div>*/
+/* 		<button type="submit" class="btn btn-primary">Rechercher</button>*/
+/* 	</form>*/
+/* */
+/* {% endif %}	*/
 /* */
 /* {% endblock fos_user_content %}*/
 /* */
