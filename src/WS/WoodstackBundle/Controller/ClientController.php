@@ -43,7 +43,7 @@ class ClientController extends Controller
 			->add('nom', 'text')
 			->add('prenom', 'text')
 			->add('adresse', 'text')
-			->add('code_postal', 'integer')
+			->add('code_postal', 'number')
 			->add('ville', 'text')
 			->add('commercial', 'text')
 			->add('telephone', 'text')

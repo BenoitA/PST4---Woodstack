@@ -6,8 +6,36 @@
 
 
 {% block fos_user_content %}
-	
-	{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
-	
-	
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+	<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
+    	
+    			<td>{{ form_errors(form.username) }}</td>
+                <td>Nom d'utilisateur :</td>
+                <td>{{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}</td>
+				<br/>
+		
+                <td>{{ form_errors(form.email) }}</td>
+                <td>Email :</td>
+                <td>{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}</td>
+				<br/>
+
+				<td>{{ form_errors(form.current_password) }}</td>
+                <td>Email :</td>
+                <td>{{ form_widget(form.current_password, {'attr': {'class': 'form-control'}}) }}</td>
+				<br/>
+                
+    		<div>
+				{{ form_end(form) }}
+    			<br/>
+				 <input class="btn btn-success btn-block"type="submit" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" />
+    		</div>
+	</form>
+     </div>
+  <div class="col-md-6"></div>
+</div>	
+
+	{#{% include "FOSUserBundle:Profile:edit_content.html.twig" %}#}
+		
 {% endblock fos_user_content %}

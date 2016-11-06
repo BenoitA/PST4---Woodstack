@@ -6,11 +6,81 @@
 
 {% block fos_user_content %}
 
-<p>Veuillez ajouter un nouveau client.</p>
-<center>
-	<div class="well">
-		{{ form(form) }}
-	</div>
-</center>
+<div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-6">
+		<div class="well">
+		  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+		  {{ form_errors(form) }}
+
+		    <div class="form-group">
+		      {{ form_label(form.nom, "Nom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		      {{ form_errors(form.nom) }}
+		      <div class="col-sm-8">
+		        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+		      </div>
+ 		   </div>
+
+  		  <div class="form-group">
+ 		     {{ form_label(form.prenom, "Prenom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+  		     {{ form_errors(form.prenom) }}
+  		     <div class="col-sm-8">
+  		       {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+  		    </div>
+  		  </div>
+
+ 		   <div class="form-group">
+  		     {{ form_label(form.adresse, "Adresse", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+   			 {{ form_errors(form.adresse) }}
+   		     <div class="col-sm-8">
+  		       {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+  		    </div>
+ 		   </div>
+
+			<div class="form-group">
+		      {{ form_label(form.code_postal, "Code postal", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		      {{ form_errors(form.code_postal) }}
+ 		     <div class="col-sm-8">
+ 		       {{ form_widget(form.code_postal, {'attr': {'class': 'form-control'}}) }}
+ 		     </div>
+ 		   </div>
+
+			<div class="form-group">
+ 		     {{ form_label(form.ville, "ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      	     {{ form_errors(form.ville) }}
+ 		     <div class="col-sm-8">
+ 		       {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+	        </div>
+		    </div>
+
+			<div class="form-group">
+		      {{ form_label(form.commercial, "commercial", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		      {{ form_errors(form.commercial) }}
+		      <div class="col-sm-8">
+		        {{ form_widget(form.commercial, {'attr': {'class': 'form-control'}}) }}
+		      </div>
+		    </div>	
+
+			<div class="form-group">
+		      {{ form_label(form.telephone, "telephone", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		      {{ form_errors(form.telephone) }}
+		      <div class="col-sm-8">
+		        {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+		      </div>
+		    </div>
+		
+		<div class="form-group">
+			<div class="col-sm-3"></div>
+  			<div class="col-sm-6">
+			  {{ form_label(form.save, "Enregistrer", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			  {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-block'}}) }}
+			</div>
+  			<div class="col-sm-3">{{ form_rest(form) }}</div>
+		</div>
+  		{{ form_end(form) }}
+		</div>
+	 </div>
+  <div class="col-md-5"></div>
+</div>
 
 {% endblock fos_user_content %}	

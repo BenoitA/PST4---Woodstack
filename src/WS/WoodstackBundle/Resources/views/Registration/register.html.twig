@@ -6,38 +6,40 @@
 
 
 {% block fos_user_content %}
-<center>
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
 	<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" style="width:200px">
     	
-    		
     		<td>{{ form_errors(form.username) }}</td>
                 <td>Nom d'utilisateur :</td>
-                <td>{{ form_widget(form.username) }}</td>
+                <td>{{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.email) }}</td>
                 <td>Email :</td>
-                <td>{{ form_widget(form.email) }}</td>
+                <td>{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.plainPassword.first) }}</td>
                 <td>Mot de passe :</td>
-                <td>{{ form_widget(form.plainPassword.first) }}</td>
+                <td>{{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}</td>
 		<br/>
 		
                 <td>{{ form_errors(form.plainPassword.second) }}</td>
                 <td>Confirmez le mot de passe :</td>
-                <td>{{ form_widget(form.plainPassword.second) }}</td>
+                <td>{{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}</td>
  
- 
-                {{ form_rest(form) }}
+                
                 
     		<div>
     			<br/>
        			 <input class="btn btn-success btn-block" type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
     		</div>
 	</form>
-</center>
+     </div>
+  <div class="col-md-6"></div>
+</div>
 
 {% endblock fos_user_content %}
 

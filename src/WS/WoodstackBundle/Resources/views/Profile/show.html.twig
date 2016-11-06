@@ -8,7 +8,24 @@
 
 {% block fos_user_content %}
 
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <img src="/PST4-Woodstack/web/profil.png" class="img-responsive" style="width:20%">
+	<div class="fos_user_user_show">
+    	<p><strong>Nom d'utilisateur : </strong>{{ user.username }}</p>
+    	<p><strong>Email : </strong>{{ user.email }}</p>
+		<a class="btn btn-success" href="{{ path('fos_user_profile_edit') }}" role="button">Modifier</a>
+	</div>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+		{#
+		
 		{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+		
+		
+		#}
 
 {% endblock fos_user_content %}
 

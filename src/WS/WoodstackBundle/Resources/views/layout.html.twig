@@ -9,16 +9,14 @@
   <title>{% block title %}WoodStack{% endblock %}</title>
 
   {% block stylesheets %}
-    {# On charge le CSS de bootstrap depuis le site directement #}
-    <link rel="stylesheet" href="/Symfony/PST4---Woodstack/web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/PST4-Woodstack/web/css/bootstrap.min.css">
   {% endblock %}
-  
+
 </head>
 
-<body style="padding-top: 70px;">
+<body>
 	
 	{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-	
 	<nav class="navbar navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
@@ -72,56 +70,44 @@
 			</div>
 		</nav>
 		{% endif %}
-	
 
-  <div class="container"> 
-  
-	<div class="col-xs-12 col-sm-9" style="text-align:center" >
-		<div id="header" class="jumbotron" style="background:lightgreen">
+
+  <div class="jumbotron" style="background-image:url(/PST4-Woodstack/web/blueprint.png);background-position:0% 100%;"> 
+	<div id="header" class="container" style="text-align:center;height:200px;">
+	
+	<font color="lightgreen">
 			<h1 align="center">WoodStack</h1>
-			<p>
-				Ma plateforme de gestion <br />
-				<I>(Ce projet est dans le cadre des PST4 de l'ESIEA)</I>
-			</p>
-      
-		</div>
+			Ma plateforme de gestion <br/>
+	</font>
 	</div>	
    </div>
-   
+
+
    <div class="container">
    <div class="row" style="left:50em">
-
-
-			<div id="content" class="col-md-9" >
-				
+			<div id="content" class="col-sm-9" >
 				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 					Bienvenue {{ app.user.username }}<br />
-					
-					
-					
 				{% endif %}
 				
 				{% block body %}
-					
 				{% endblock %}
 			</div>
 			
-			<div class="col-md-9">
+			<div class="col-sm-9">
 				{% block fos_user_content %}
 				{% endblock fos_user_content %}
-			</div>
-			
-			
+			</div>			
 	</div>
 	<hr>
 		<footer style="text-align:center">
 			<p>Auffret - Glaisner - Nurit</p>
 		</footer>
+
   {% block javascripts %}
-	{# Ajouter ces lignes javascript pour utiliser des fonctionnalités
-	de bootstrap twitter #}
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="/Symfony/PST4---Woodstack/web/js/bootstrap.min.js"></script>
+		<script src="/PST4-Woodstack/web/js/bootstrap.min.js"></script>
 	{% endblock %}
+	
 </body>
 </html>
