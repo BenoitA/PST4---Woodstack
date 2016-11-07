@@ -15,8 +15,8 @@ class __TwigTemplate_cbff2be7f3e42ed061ff3b531f8ebe9df0615192b798a40b5cd6e76a51f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_209f334acdae31d5706094956ea0e29cf8eca8833a31597a04b0ab3eb860403f = $this->env->getExtension("native_profiler");
-        $__internal_209f334acdae31d5706094956ea0e29cf8eca8833a31597a04b0ab3eb860403f->enter($__internal_209f334acdae31d5706094956ea0e29cf8eca8833a31597a04b0ab3eb860403f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
+        $__internal_0c7a914b6043d78792429fc138997a06ecacd9f593c80b9295417635193e5a80 = $this->env->getExtension("native_profiler");
+        $__internal_0c7a914b6043d78792429fc138997a06ecacd9f593c80b9295417635193e5a80->enter($__internal_0c7a914b6043d78792429fc138997a06ecacd9f593c80b9295417635193e5a80_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
 
         // line 1
         echo "<div class=\"search clearfix\" id=\"searchBar\">
@@ -116,7 +116,7 @@ class __TwigTemplate_cbff2be7f3e42ed061ff3b531f8ebe9df0615192b798a40b5cd6e76a51f
 </div>
 ";
         
-        $__internal_209f334acdae31d5706094956ea0e29cf8eca8833a31597a04b0ab3eb860403f->leave($__internal_209f334acdae31d5706094956ea0e29cf8eca8833a31597a04b0ab3eb860403f_prof);
+        $__internal_0c7a914b6043d78792429fc138997a06ecacd9f593c80b9295417635193e5a80->leave($__internal_0c7a914b6043d78792429fc138997a06ecacd9f593c80b9295417635193e5a80_prof);
 
     }
 

@@ -157,6 +157,28 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'WS\\WoodstackBundle\\Controller\\NavbarController::navbarAction',  'page' => 1,  '_route' => 'ws_woodstack_navbar',);
             }
 
+            // ws_woodstack_show
+            if (preg_match('#^/woodstack/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ws_woodstack_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ws_woodstack_show')), array (  '_controller' => 'WS\\WoodstackBundle\\Controller\\WoodController::showAction',));
+            }
+            not_ws_woodstack_show:
+
+            // ws_woodstack_edit
+            if (preg_match('#^/woodstack/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ws_woodstack_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ws_woodstack_edit')), array (  '_controller' => 'WS\\WoodstackBundle\\Controller\\WoodController::editAction',));
+            }
+            not_ws_woodstack_edit:
+
         }
 
         if (0 === strpos($pathinfo, '/platform')) {

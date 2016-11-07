@@ -3,7 +3,7 @@
 namespace WS\WoodstackBundle\Controller;
 
 use WS\WoodstackBundle\Entity\User;
-
+use WS\WoodstackBundle\Entity\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,20 +11,18 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class WoodController extends Controller{
 	
-	public function indexAction($page){
-		if ($page < 1) {
-      // On déclenche une exception NotFoundHttpException, cela va afficher
-      // une page d'erreur 404 (qu'on pourra personnaliser plus tard d'ailleurs)
-		throw new NotFoundHttpException('Page "'.$page.'" inexistante.');
-		}
-		//return new Response("Hello World !");
+	public function indexAction(){
+		
 
     // Pour récupérer la liste de toutes les annonces : on utilise findAll()
 		
-    
+		$em = $this->getDoctrine()->getManager();
+		$clients = $em->getRepository('WSWoodstackBundle:Client')->findAll();
+		return $this->render('WSWoodstackBundle:Wood:index.html.twig', array(
+			'clients'=> $clients,
+			));
 
-    // L'appel de la vue ne change pas
-			return $this->render('WSWoodstackBundle:Wood:index.html.twig');
+   
     
 	}
 	
@@ -48,6 +46,12 @@ class WoodController extends Controller{
 		
 		
 		return $this->render('WSWoodstackBundle:Registration:register.html.twig');
+	}
+	
+	public function showAction(Client $client) {
+		return $this->render('WSWoodstackBundle:Wood:show.html.twig', array(
+			'client' => $client,
+			));
 	}
 	
 }

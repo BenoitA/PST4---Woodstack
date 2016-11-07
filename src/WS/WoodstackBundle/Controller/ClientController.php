@@ -78,6 +78,14 @@ class ClientController extends Controller
 		));
         
     }
+	public function showClient()
+	{
+		$em = $this->getDoctrine()->getManager();
+		$clients = $em->getRepository('WSWoodstackBundle:Client')->findAll();
+		return $this->render('WSWoodstackBundle:Wood:index.html.twig', array(
+			'clients'=> $clients,
+			));
+	}
 
 }
 ?>

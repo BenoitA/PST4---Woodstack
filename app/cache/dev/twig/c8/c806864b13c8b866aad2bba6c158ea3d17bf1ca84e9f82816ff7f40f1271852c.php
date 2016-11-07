@@ -15,8 +15,8 @@ class __TwigTemplate_15c26f5d7a4e532f2ea5a9d7c89256163aa992febe7b9c9abcf9ad9713b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1a831e8683f0f6811a935fa2c1f5246f4ba0ff5db77f7cda7f78894194a1e63a = $this->env->getExtension("native_profiler");
-        $__internal_1a831e8683f0f6811a935fa2c1f5246f4ba0ff5db77f7cda7f78894194a1e63a->enter($__internal_1a831e8683f0f6811a935fa2c1f5246f4ba0ff5db77f7cda7f78894194a1e63a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:menu.html.twig"));
+        $__internal_97f5a5a9946be8d2bfb556656a6c93a0ec1ac59b975d84dfd741c7e934adb730 = $this->env->getExtension("native_profiler");
+        $__internal_97f5a5a9946be8d2bfb556656a6c93a0ec1ac59b975d84dfd741c7e934adb730->enter($__internal_97f5a5a9946be8d2bfb556656a6c93a0ec1ac59b975d84dfd741c7e934adb730_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:menu.html.twig"));
 
         // line 1
         echo "<ul class=\"nav nav-pills nav-stacked\">
@@ -45,7 +45,7 @@ class __TwigTemplate_15c26f5d7a4e532f2ea5a9d7c89256163aa992febe7b9c9abcf9ad9713b
         // line 9
         echo "</ul>";
         
-        $__internal_1a831e8683f0f6811a935fa2c1f5246f4ba0ff5db77f7cda7f78894194a1e63a->leave($__internal_1a831e8683f0f6811a935fa2c1f5246f4ba0ff5db77f7cda7f78894194a1e63a_prof);
+        $__internal_97f5a5a9946be8d2bfb556656a6c93a0ec1ac59b975d84dfd741c7e934adb730->leave($__internal_97f5a5a9946be8d2bfb556656a6c93a0ec1ac59b975d84dfd741c7e934adb730_prof);
 
     }
 

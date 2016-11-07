@@ -27,3 +27,13 @@ ws_woodstack_navbar:
     defaults: { _controller:WSWoodstackBundle:Navbar:navbar, page:1 }
     requirements:
       id: \d+
+
+ws_woodstack_show:
+    path:    /{id}/show
+    defaults:    { _controller:WSWoodstackBundle:Wood:show }
+    methods:    GET
+
+ws_woodstack_edit:
+    path:    /{id}/edit
+    defaults:    { _controller:WSWoodstackBundle:Wood:edit }
+    methods:    GET

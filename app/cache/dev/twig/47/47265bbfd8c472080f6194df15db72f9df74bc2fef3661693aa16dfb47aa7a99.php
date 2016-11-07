@@ -15,8 +15,8 @@ class __TwigTemplate_5f4274bfd571788c8fbaf4fc7faad8758d09cf64219d13609cc32845f00
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8213f9c9ad49525dc188ff816effd2c3fb785a755b6b2d84628d8449b5c0af4f = $this->env->getExtension("native_profiler");
-        $__internal_8213f9c9ad49525dc188ff816effd2c3fb785a755b6b2d84628d8449b5c0af4f->enter($__internal_8213f9c9ad49525dc188ff816effd2c3fb785a755b6b2d84628d8449b5c0af4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
+        $__internal_d058955a99cc732866f06c241c8ccc23f2113d713481a2aaf86bf11510c29bc8 = $this->env->getExtension("native_profiler");
+        $__internal_d058955a99cc732866f06c241c8ccc23f2113d713481a2aaf86bf11510c29bc8->enter($__internal_d058955a99cc732866f06c241c8ccc23f2113d713481a2aaf86bf11510c29bc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
 
         // line 1
         echo "<form class=\"form-signin\"  action=\"";
@@ -37,7 +37,7 @@ class __TwigTemplate_5f4274bfd571788c8fbaf4fc7faad8758d09cf64219d13609cc32845f00
 </form>
 ";
         
-        $__internal_8213f9c9ad49525dc188ff816effd2c3fb785a755b6b2d84628d8449b5c0af4f->leave($__internal_8213f9c9ad49525dc188ff816effd2c3fb785a755b6b2d84628d8449b5c0af4f_prof);
+        $__internal_d058955a99cc732866f06c241c8ccc23f2113d713481a2aaf86bf11510c29bc8->leave($__internal_d058955a99cc732866f06c241c8ccc23f2113d713481a2aaf86bf11510c29bc8_prof);
 
     }
 

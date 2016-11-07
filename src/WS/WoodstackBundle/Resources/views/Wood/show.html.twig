@@ -1,0 +1,50 @@
+{% extends "WSWoodstackBundle::layout.html.twig" %}
+
+{% block title %}
+	WoodStack 
+{% endblock %}
+
+
+{% block body %}
+</br>
+	<div>
+		<div class="row">
+			<div class="col-md-2"><h3>Client n° {{ client.id }}</h3></div>
+		</div>
+		<div class="row">
+			<h4><div class="col-md-2">Nom</div><div class="col-md-2">Prenom</div></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-2">{{ client.nom }}</div><div class="col-md-2">{{ client.prenom }}</div>
+		</div>
+		<div class="row">
+			<h4><div class="col-md-2">Adresse</div></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-2">{{ client.adresse }}</div>
+		</div>
+		<div class="row">
+			<h4><div class="col-md-2">Code postal</div><div class="col-md-2">Ville</div></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-2">{{ client.codePostal }}</div><div class="col-md-2">{{ client.ville }}</div>
+		</div>
+		<div class="row">
+			<h4><div class="col-md-2">Telephone</div></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-2">{{ client.telephone }}</div>
+		</div>
+		<div class="row">
+			<h4><div class="col-md-2">Commercial</div></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-2">{{ client.commercial }}</div>
+		</div>
+		<div class="row"></br>
+			 <div class="col-md-1"></div><div class="col-md-1"><a class="btn btn-success btn-xs" href="{{ path('ws_woodstack_home') }}" role="button">Retour</a></div>
+		</div>
+	</div>
+
+
+{% endblock %}

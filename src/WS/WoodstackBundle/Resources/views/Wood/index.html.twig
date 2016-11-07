@@ -57,6 +57,32 @@
 		<button type="submit" class="btn btn-success" >Rechercher</button>
 	</form>
 
+</br>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Ville</th>
+        <th>Commercial</th>
+        <th></th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for client in clients %}
+			<tr>
+				<td><a href="{{ path('ws_woodstack_show', { 'id': client.id}) }}" role="button">{{ client.id }}</a></td>
+				<td><a href="{{ path('ws_woodstack_show', { 'id': client.id}) }}" role="button">{{ client.nom }}</a></td>
+        <td><a href="{{ path('ws_woodstack_show', { 'id': client.id}) }}" role="button">{{ client.prenom }}</a></td>
+        <td><a href="{{ path('ws_woodstack_show', { 'id': client.id}) }}" role="button">{{ client.ville }}</a></td>
+        <td><a href="{{ path('ws_woodstack_show', { 'id': client.id}) }}" role="button">{{ client.Commercial }}</a></td>
+        <td><a href="{{ path('ws_woodstack_edit', { 'id': client.id}) }}" role="button"><img src="/PST4-Woodstack/web/edit-icon.png" style="width:22px;height:22px;border:0;" alt="Modifier"></a></td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
 {% endif %}	
+
 
 {% endblock fos_user_content %}
