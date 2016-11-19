@@ -17,16 +17,16 @@ security:
            pattern: ^/
            form_login:
               provider: fos_userbundle
-              login_path: /login
-              check_path: /login_check
+              login_path: /woodstack/login
+              check_path: /woodstack/login_check
               csrf_provider: security.csrf.token_manager
               always_use_default_target_path: true
-              default_target_path: /
+              default_target_path: /woodstack
              # success_handler: ws_woodstack.component.authentication.handler.login_success_handler
 
            logout:   
-                 path:   /logout
-                 target: /
+                 path:   /woodstack/logout
+                 target: /woodstack
                 # success_handler: ws_woodstack.component.authentication.handler.logout_success_handler
            anonymous:  true
        
