@@ -1,6 +1,6 @@
 ws_woodstack:
     resource: "@WSWoodstackBundle/Resources/config/routing.yml"
-    prefix:   /woodstack
+    prefix:   /
 
 oc_platform:
     resource: "@OCPlatformBundle/Resources/config/routing.yml"
