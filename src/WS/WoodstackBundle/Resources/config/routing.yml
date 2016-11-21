@@ -1,5 +1,5 @@
 ws_woodstack_home:
-    path:  /woodstack
+    path:  /
     defaults: { _controller: WSWoodstackBundle:Wood:index, page: 1 }
     requirements:
        page: \d*
