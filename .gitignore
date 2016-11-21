@@ -1,11 +1,9 @@
-/.php_cs.cache
+app/logs
 
-/app/logs
+app/config/parameters.yml
+app/config/*.local.yml
 
-/app/config/parameters.yml
-/app/config/*.local.yml
-
-/bin
+bin/*
 
 app/AppCache.php
 app/AppKernel.php
@@ -14,7 +12,7 @@ app/autoload.php
 app/bootstrap.php.cache
 app/check.php
 app/console
-/app/*.cache
-/app/cache
+app/*.cache
+app/cache
 app/phpunit.xml.dist
 .idea/
